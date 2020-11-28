@@ -1,0 +1,471 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 70px;
+    border: 0;
+    padding: 0;
+    font-family: "Sansita Swashed", cursive;
+    padding-top: 630px;
+    transition: padding-top 0.5s ease;
+    background-image: url(../img/fondo2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #4a2203;
+}
+header {
+    width: 100%;
+    height: 600px;
+    background-image: url(../img/fondo-caffento.jpg);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+#logo {
+    border-radius: 50%;
+}
+header h1 {
+    font-size: 42px;
+    color: white;
+    line-height: 238px;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+header h1 i {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+header nav {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    background: rgba(191, 90, 27, 0.8);
+}
+header nav a {
+    color: white;
+    display: inline-block;
+    padding: 10px 15px;
+    line-height: 1;
+    text-decoration: none;
+    border-radius: 5px;
+}
+header nav a:hover {
+    background: rgb(0, 0, 0, 0.2);
+}
+.container-all {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  padding: 40px;
+  z-index: 100;
+  padding: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 600ms;
+}
+
+.container-all:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.container-all:target .ventana {
+    top: 22%;
+    left: 50%;
+    transform: rotate(0deg) translate(-50%, -50%);
+    visibility: visible;
+}
+
+.ventana {
+    background: white;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    visibility: hidden;
+    top: -80%;
+    left: -80%;
+    transform: rotate(90deg) translate(-150%, 230%);
+    transition: all 600ms;
+}
+
+.img {
+    width: 60%;
+    background-image: url(../img/fondo2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container-text {
+    width: 40%;
+    padding: 50px;
+    overflow-y: auto;
+}
+
+.container-text h1 {
+    font-size: 30px;
+}
+.Desayunos {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background: #993e17;
+    width: 90%;
+    color: white;
+}
+
+.container-text p {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.btncerrar {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    padding: 20px;
+    border-color: orange;
+    border-width: 1px;
+    border-style: solid;
+    background: black;
+    color: orange;
+    border-radius: 50%;
+    line-height: 10px;
+}
+
+.main {
+    width: 100%;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    
+}
+
+.logo-nav-container {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4 linear;
+    border-radius: 5px;
+}
+
+.navigation ul li a:hover {
+    background: #faa25f;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+section {
+    margin: 200px 10px;
+    padding: 20px;
+    background: orange;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgb(0, 0, 0, 0.2);
+}
+body.sticky-header {
+    padding-top: 100px;
+}
+body.sticky-header header {
+    height: 60px;
+    background: rgb(168, 35, 35);
+}
+body.sticky-header header h1 {
+    transform: scale(0, 0);
+}
+body.sticky-header header #logo {
+    transform: scale(0, 0);
+}
+
+/* -----------------------------------menu digital-------------------------------*/
+main .container h2 {
+    background: #bf2d13;
+    border-radius: 5px;
+    color: white;
+    padding-left: 2rem;
+}
+
+.contenedo-todo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.container {
+    width: 85%;
+    max-width: 1000px;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    background-color: #e38944;
+    padding-bottom: 5rem;
+}
+
+.carta1 {
+    height: 100%;
+    width: 100%;
+}
+
+.lado {
+    width: 100%;
+    height: 100%;
+    padding: auto;
+}
+
+.frente {
+    background: rgb(141, 86, 41);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.atras {
+  margin-top: 30px;
+    background: rgb(141, 86, 41);
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+}
+
+#menu {
+    padding-top: 3rem;
+}
+
+#titulo {
+    background: #993e17;
+    margin: auto;
+    width: 90%;
+    color: white;
+}
+
+#postress {
+    padding-top: 2rem;
+}
+#rengon{
+  font-size: 2em;
+}
+
+#rengon:hover {
+    background: #4a2203;
+    padding: 0.5rem 1rem;
+    font-size: 2.1em;
+    width: 98%;
+    margin: auto;
+    text-shadow: 3px 3px 2px #000;
+    -webkit-box-shadow: -1px 7px 68px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 7px 68px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 7px 68px 2px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    transition: all 0.4 linear;
+}
+
+.Baguettes,
+.Quesadillas,
+.Crepas,
+.Paninis,
+.Pastas,
+.Ensaladas,
+.Otros,
+.Nachos,
+.Calientes,
+.Frias,
+.Calientess,
+.Desayunos {
+    background: #993e17;
+    border-radius: 5px;
+    color: white;
+}
+#nachos, #otros, #ensala{
+  margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.Nachos #nachos, #otros, #ensaladas{
+  background: #bf2d13;
+    border-radius: 5px;
+    color: white;
+    padding-left: 2rem;
+    font-size: 30px;
+    display: flex;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+main .container #salado a {
+    color: white;
+    text-decoration: none;
+    margin-left: 5px;
+}
+main .container #salado #tomar{
+  margin-left: 20px;
+}
+
+main .container #salado2 a {
+    color: white;
+    text-decoration: none;
+    padding-left: 1rem;
+}
+
+main #postres {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background: #e0a477;
+    border-radius: 5px;
+    padding-bottom: 5rem;
+}
+
+main h1 {
+    -webkit-box-shadow: -2px 12px 14px 6px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow: -2px 12px 14px 6px rgba(0, 0, 0, 0.56);
+    box-shadow: -2px 12px 14px 6px rgba(0, 0, 0, 0.56);
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+    .navigation {
+        width: 100%;
+    }
+
+    .logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main {
+        padding-top: 12rem;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 827px) {
+        .main {
+            padding-top: 15rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem 3rem;
+    }
+
+    .navigation {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navigation ul {
+        display: none;
+    }
+
+    .navigation ul .show {
+        display: block;
+    }
+
+    .navigation ul li {
+        display: block;
+    }
+
+    .navigation ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.4 linear;
+        border-radius: 5px;
+    }
+
+    .navigation ul li a:hover {
+        background: #faa25f;
+    }
+
+    /*-------------------------- Menu ---------------------------------*/
+    #salado,
+    #salado2 {
+        width: 100%;
+    }
+
+    .container h2 {
+        font-size: 2rem;
+    }
+
+    #rengon {
+        font-size: 1.2rem;
+    }
+
+    #rengon:hover {
+        font-size: 1.4rem;
+    }
+
+    #dulce,
+    #dulce2 {
+        width: 100%;
+    }
+
+    .ventana {
+        width: 100%;
+        max-width: 500px;
+        flex-direction: column;
+        height: 100%;
+        max-height: 400px;
+    }
+
+    .img {
+        width: 100%;
+        height: 60%;
+    }
+
+    .container-text {
+        width: 100%;
+        height: 40%;
+        padding-top: 5px;
+    }
+
+    .container-all:target .ventana {
+        top: 44%;
+    }
+}

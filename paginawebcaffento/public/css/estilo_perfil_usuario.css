@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap");
+* {
+    text-decoration: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Sansita Swashed", cursive;
+}
+.form{
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 60%;
+}
+.hederusu {
+    position: fixed;
+    background: #ba5f0f;
+    padding: 20px;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+}
+.legt_area h3 {
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+}
+.logut_btn {
+    padding: 5px;
+    background: #ff8d29;
+    text-decoration: none;
+    float: right;
+    margin-top: -30px;
+    margin-right: 40px;
+    border-radius: 2px;
+    font-weight: 600;
+    color: white;
+    transition: 0.5s;
+    transition-property: backgraund;
+}
+.logut_btn:hover {
+    background: #ffb06b;
+}
+.sidebarr {
+    background: #ba5f0f;
+    margin-top: 70px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+}
+.sidebarr .profile_image {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+.fondo {
+    width: 100%;
+    max-width: 60%;
+    border-radius: 30px;
+    background: wheat;
+}
+.foto_perfil {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 200px;
+    height: 200px;
+}
+.sidebarr h4 {
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+#nombre,
+#correo,
+#telefono {
+    margin-top: 20px;
+    width: 100%;
+    background: rgb(209, 132, 31);
+    color: white;
+    border-radius: 5px;
+}
+
+.sidebarr a {
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: backgraund;
+}
+
+.sidebarr a:hover {
+    background: #ffb06b;
+}
+
+.sidebarr i {
+    padding-right: 10px;
+}
+
+label #sidebar_btn {
+    z-index: 1;
+    color: #fff;
+    cursor: pointer;
+    left: 300px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition-property: color;
+}
+
+label #sidebar_btn:hover {
+    color: #ffb06b;
+}
+
+#check:checked ~ .sidebarr {
+    left: -190px;
+}
+#check:checked ~ .sidebarr a span {
+    display: none;
+}
+
+#check:checked ~ .sidebarr a {
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+
+.content {
+    margin-left: 250px;
+    display: flex;
+    background: url(../img/fondo_perfil.jpeg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: 0.5s;
+    align-items: center;
+    justify-content: center;
+}
+
+#check:checked ~ .content {
+    margin-left: 60px;
+}
+
+#check {
+    display: none;
+}
+/*----------------- MODAL ------------------------------*/
+/*.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+}
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translate(0, -50px);
+}
+@media (prefers-reduced-motion: reduce) {
+    .modal.fade .modal-dialog {
+        transition: none;
+    }
+}
+.modal.show .modal-dialog {
+    transform: none;
+}
+.modal.modal-static .modal-dialog {
+    transform: scale(1.02);
+}
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+}
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+}
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translate(0, -50px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal.fade .modal-dialog {
+        transition: none;
+    }
+}
+
+.modal.show .modal-dialog {
+    transform: none;
+}
+
+.modal.modal-static .modal-dialog {
+    transform: scale(1.02);
+}
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+}
+.modal-dialog-scrollable .modal-content {
+    max-height: calc(100vh - 1rem);
+    overflow: hidden;
+}
+.modal-dialog-centered.modal-dialog-scrollable .modal-content {
+    max-height: none;
+}
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+.modal-dialog-scrollable .modal-content {
+    max-height: calc(100vh - 3.5rem);
+}
+.modal-dialog-scrollable .modal-header,
+.modal-dialog-scrollable .modal-footer {
+    flex-shrink: 0;
+}
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #e3e6f0;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+}
+.modal-header .close {
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+}
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+.alert-dismissible .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.75rem 1.25rem;
+    color: inherit;
+}
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+}
+.close:hover {
+    color: #000;
+    text-decoration: none;
+}
+.close:not(:disabled):not(.disabled):hover,
+.close:not(:disabled):not(.disabled):focus {
+    opacity: 0.75;
+}
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+a.close.disabled {
+    pointer-events: none;
+}
+.modal-header .close {
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+}
+.modal-dialog-scrollable .modal-body {
+    overflow-y: auto;
+}
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #e3e6f0;
+    border-bottom-right-radius: calc(0.3rem - 1px);
+    border-bottom-left-radius: calc(0.3rem - 1px);
+  }
+  .modal-footer > * {
+    margin: 0.25rem;
+  }*/
+/*-----------------RESERVACIONES--------------------------*/
+
+.cont_res {
+    margin-left: 250px;
+    display: flex;
+    background: url(../img/fondo_perfil.jpeg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: 0.5s;
+    align-items: center;
+    justify-content: center;
+}
+#check:checked ~ .cont_res {
+    margin-left: 60px;
+}
+#todo {
+    width: 450px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+#tit_res {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+#motivo {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+#camp-res,#camp-ress{
+    width: 45%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+#camp-res{
+    margin-right: 10px;
+}
+#men_res{
+    width: 100%;
+    display: flow-root;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+#mesa {
+    width:20%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+#num_personas{
+    width:45%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+#esc_mesa{
+    width: 30%;
+    background: #31384a;
+    color: #fff;
+    padding: 10px;
+    margin-left: 10px;
+}
+#men_res {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+#boton_res {
+    background: #31384a;
+    color: #fff;
+    padding: 20px;
+}
+#boton_res:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .cont_res {
+        width: 100%;
+    }
+}
+
+/*----------------ventana de mesas ---------------------------*/
+.container-all {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 220px;
+    margin-left: 330px;
+    padding: 40px;
+    z-index: 100;
+    padding: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+.container-all:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.container-all:target .ventana {
+    top: 40%;
+    left: 40%;
+    transform: rotate(0deg) translate(-50%, -50%);
+    visibility: visible;
+}
+
+.ventana {
+    background: white;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    visibility: hidden;
+    top: -80%;
+    left: -80%;
+    transform: rotate(90deg) translate(-50%, -50%);
+    transition: all 600ms;
+}
+
+.img {
+    width: 60%;
+    background-image: url(../img/fondo2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container-text {
+    width: 40%;
+    padding: 50px;
+    overflow-y: auto;
+}
+
+.container-text h1 {
+    font-size: 30px;
+}
+.container-text p {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.btncerrar {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    padding: 20px;
+    border-color: orange;
+    border-width: 1px;
+    border-style: solid;
+    background: black;
+    color: orange;
+    border-radius: 50%;
+    line-height: 10px;
+    box-sizing: border-box;
+}

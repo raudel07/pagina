@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Sansita Swashed', cursive;
+    padding: 0;
+    margin: 0;
+}
+.logo{
+    font-size: 70px;
+
+}
+.logo_main{
+    width: 100%;
+    background-image: url(../img/fondo-caffento.jpg);
+    height: 400px;
+    padding: 20px;
+    cursor: default;
+    display: flex;
+    margin: auto;
+}
+
+.logomain{
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    width: 250px;
+    height: 150px;
+}
+.logo_small{
+    display: inline-block;
+    font-size: 20px;
+    padding:4px;
+    margin-right: 60px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+.logomain2{
+    margin: auto;
+    border-radius: 50%;
+    width: 100px;
+    height: 70px;
+}
+.navv{
+    float: left;
+    width: 100%;
+    background:#782802;
+    color: white;
+    padding: 0 20px;
+    transition: .3s ease all;
+    backface-visibility: hidden;
+    transform: translate3d(0 ,0 ,0);
+    -webkit-transform: translate3d(0 ,0 ,0);
+}
+.navv .wrap{
+    position: relative;
+    left:-350px;
+    transition: 0.4s ease all;
+    
+}
+nav{
+    display: inline-block;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative; 
+    left: 40%;
+}
+nav li{
+    margin:0;
+    padding:0;
+    display: inline-block;
+    position: relative; 
+    right: 40%;
+}
+nav a{
+    display: block;
+    padding:25px;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s ease all;   
+}
+nav a:hover{
+    color:  white;
+    background:#c92020;
+    border-radius: 10px;
+}
+
+body.nav_fixed .navv{
+    position: fixed;
+    top: 0;
+}
+body.nav_fixed .navv .wrap{
+    left:-40px;
+}
+.btn_menu{
+    width: 60px;
+    height: 60px;
+    padding:22px;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    background: #782802;
+    border-radius: 10px;
+    transition: all 500ms cubic-bezier(1, 0, 0 , 1);
+    transform: translateX(-100px);
+}
+
+.btn_menu:hover{
+    transform: scale(1.2);
+    background:#c92020;
+}
+.container{
+    width: 100%;
+    max-width: 75%;
+    margin: 20px auto;
+    margin-top: 200px;
+}
+
+@media screen and (max-width:800px){
+    .btn_menu{
+        transform: translateX(0px);
+    }
+    .logo_main{
+        display: none;
+    }
+    .navv{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        height: 470px;
+        padding: 0px;
+        transform: translateY(-100%);
+    }
+    .navv .wrap{
+        left:0;
+    }
+    nav{
+        width: 100%;
+        position: absolute;
+        top: 100px;
+    }
+    nav li{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    nav ul{
+        width: 100%;
+        text-align: center;
+    }
+    .logo_small{
+        position: absolute;
+       display: flex;
+       width: 100%;
+    }
+    nav a{
+        width: 100%;
+        display: block;
+        padding: 20px;
+        margin: 0;
+    }
+    .nav-toggle{
+        transition: all 300ms cubic-bezier(1,0,0,1);
+        transform: translateX(0%);
+
+    }
+}
