@@ -92,3 +92,5 @@ $(window).scroll(function(){
 $('.btn_menu').on('click',function(){
   $('.navv').toggleClass('nav-toggle');
 });
+
+

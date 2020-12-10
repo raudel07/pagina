@@ -1,0 +1,44 @@
+<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-titlemenu text-center seccion">
+						<h2>Galería</h2>
+						<p>No creo que exista ninguna emoción que pueda atravesar el corazón humano como la que se siente en nuestro interior cuando vemos y luego comemos nuestra comida favorita</p>
+					</div>
+				</div>
+			</div>
+			<div class="tz-gallery">
+				<div class="row">
+					<div class="col-sm-12 col-md-4 col-lg-4">
+						<a class="lightbox" href="../img/images/gallery-img-01.jpg">
+							<img class="img-fluid" src="../img/images/gallery-img-01.jpg" alt="Gallery Images">
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<a class="lightbox" href="../img/images/gallery-img-02.jpg">
+							<img class="img-fluid" src="../img/images/gallery-img-02.jpg" alt="Gallery Images">
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<a class="lightbox" href="../img/images/gallery-img-03.jpg">
+							<img class="img-fluid" src="../img/images/gallery-img-03.jpg" alt="Gallery Images">
+						</a>
+					</div>
+					<div class="col-sm-12 col-md-4 col-lg-4">
+						<a class="lightbox" href="../img/images/gallery-img-04.jpg">
+							<img class="img-fluid" src="../img/images/gallery-img-04.jpg" alt="Gallery Images">
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<a class="lightbox" href="../img/images/gallery-img-05.jpg">
+							<img class="img-fluid" src="../img/images/gallery-img-05.jpg" alt="Gallery Images">
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<a class="lightbox" href="../img/images/gallery-img-06.jpg">
+							<img class="img-fluid" src="../img/images/gallery-img-06.jpg" alt="Gallery Images">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>

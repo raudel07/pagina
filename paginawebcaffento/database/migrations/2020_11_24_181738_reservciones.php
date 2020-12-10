@@ -20,6 +20,7 @@ class Reservciones extends Migration
             $table->date('fecha');
             $table->time('hora');
             $table->string('descripcion');
+            $table->string('motivo');
             $table->integer('num_personas');
             $table->string('img');
             $table->timestamps();

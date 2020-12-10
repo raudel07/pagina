@@ -1,15 +1,25 @@
 @extends('layouts.usuarios.main')
 @section('contenido')
-<form class="content">
-    <div class="fondo">
-        <center>
-            <img src="{{asset('/users/'.Auth::user()->img)}}" class="foto_perfil" alt="">
-            <div action="" class="form">
-            <h4 id="nombre">{{ Auth::user()->name }} {{ Auth::user()->ap }} {{ Auth::user()->am }}</h4>
-            <h4 id="telefono">{{ Auth::user()->telefono }}</h4>
-            <h4 id="correo">{{ Auth::user()->email }}</h4>
-</div>
-        </center>
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-6  img ">
+                <img src="{{asset('/users/'.Auth::user()->img)}}" alt="" class="img-rounded foto_perfil">
+               
+                <div class="details" >
+                <blockquote>
+                    <h5>{{ Auth::user()->name }} {{ Auth::user()->ap }} {{ Auth::user()->am }}</h5>
+                </blockquote>
+                <p>
+                    Correo: {{ Auth::user()->email }} <br>
+                    <br>
+                    Telefono: {{ Auth::user()->telefono }}<br>
+                </p>
+                </div>
+            </div>
+
+        </div>
     </div>
-</form>
+</div>
+
 @endsection

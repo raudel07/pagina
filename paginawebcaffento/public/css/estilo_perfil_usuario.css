@@ -7,8 +7,31 @@ body {
     padding: 0;
     font-family: "Sansita Swashed", cursive;
 }
-.form{
-    background-color: #FFFFFF;
+/* inicio de perfil */
+
+
+.container{
+    padding:5%;
+}
+.container .img{
+    display: flex;
+    margin: auto;
+}
+.container .details{
+    margin-left: 10px;
+    color: white;
+    border-left:3px solid #ded4da;
+}
+.container .details p{
+    margin-left: 5px;
+    font-size:15px;
+    font-weight:bold;
+}
+
+
+/* fin de perfil */
+.form {
+    
     width: 100%;
     max-width: 60%;
 }
@@ -44,7 +67,7 @@ body {
     background: #ffb06b;
 }
 .sidebarr {
-    background: #ba5f0f;
+    background: #5d2e06;
     margin-top: 70px;
     padding-top: 30px;
     position: fixed;
@@ -63,17 +86,19 @@ body {
 .fondo {
     width: 100%;
     max-width: 60%;
+    margin-top: 60px;
     border-radius: 30px;
-    background: wheat;
+    background: rgba(0, 0, 0, 0.612);
 }
 .foto_perfil {
+    border-radius: 50%;
     padding-top: 50px;
     padding-bottom: 50px;
     width: 200px;
     height: 200px;
 }
 .sidebarr h4 {
-    color: #ccc;
+    color: rgb(255, 255, 255);
     margin-top: 0;
     margin-bottom: 20px;
 }
@@ -82,7 +107,6 @@ body {
 #telefono {
     margin-top: 20px;
     width: 100%;
-    background: rgb(209, 132, 31);
     color: white;
     border-radius: 5px;
 }
@@ -352,18 +376,27 @@ a.close.disabled {
     font-size: 17px;
     border: none;
 }
-#camp-res,#camp-ress{
-    width: 45%;
+#camp-res,
+#camp-ress {
+    width: 100%;
     margin-bottom: 20px;
     padding: 7px;
     box-sizing: border-box;
     font-size: 17px;
     border: none;
 }
-#camp-res{
+#mesa-res{
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+#camp-res {
     margin-right: 10px;
 }
-#men_res{
+#men_res {
     width: 100%;
     display: flow-root;
     margin-bottom: 20px;
@@ -372,16 +405,16 @@ a.close.disabled {
     font-size: 17px;
     border: none;
 }
-#mesa {
-    width:20%;
+#mesaa {
+    width: 20%;
     margin-bottom: 20px;
     padding: 7px;
     box-sizing: border-box;
     font-size: 17px;
     border: none;
 }
-#num_personas{
-    width:45%;
+#num_personas {
+    width: 45%;
     margin-left: 10px;
     margin-bottom: 20px;
     padding: 7px;
@@ -389,7 +422,7 @@ a.close.disabled {
     font-size: 17px;
     border: none;
 }
-#esc_mesa{
+#esc_mesa {
     width: 30%;
     background: #31384a;
     color: #fff;
@@ -421,7 +454,6 @@ a.close.disabled {
     width: 100%;
     height: 100%;
     position: fixed;
-    background: rgba(0, 0, 0, 0.8);
     margin-top: 220px;
     margin-left: 330px;
     padding: 40px;
@@ -430,6 +462,9 @@ a.close.disabled {
     visibility: hidden;
     opacity: 0;
     transition: all 600ms;
+}
+#check:checked ~ .container-all {
+    margin-left: 60px;
 }
 .container-all:target {
     visibility: visible;
@@ -444,7 +479,7 @@ a.close.disabled {
 }
 
 .ventana {
-    background: white;
+    background: #795548;
     width: 100%;
     max-width: 800px;
     height: 500px;
@@ -457,26 +492,178 @@ a.close.disabled {
     transition: all 600ms;
 }
 
-.img {
-    width: 60%;
-    background-image: url(../img/fondo2.jpg);
+.img1 {
+    width: 50%;
+    height: 400px;
+    background: url(../img/piso1.png);
+    background-color: white;
+    margin: 50px 10px 0px 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    padding: 13px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+}
+.m1{
+    background-image: url(../img/mesa.png);
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 150px;
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+.m2{
+    background-image: url(../img/mesa.png);
+    width: 70px;
+    height: 70px;
+    margin-top: 170px;
+    margin-left: 150px;
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+.m3{
+    background-image: url(../img/mesa.png);
+    width: 70px;
+    height: 70px;
+    margin-top: 200px;
+    margin-left: 250px;
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+.m4{
+    background-image: url(../img/mesa.png);
+    width: 70px;
+    height: 70px;
+    margin-top: 270px;
+    margin-left: 250px;
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+.m5{
+    background-image: url(../img/mesa.png);
+    width: 70px;
+    height: 70px;
+    margin-top: 250px;
+    margin-left: 30px;
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+.m6{
+    background-image: url(../img/mesa.png);
+    width: 70px;
+    height: 70px;
+    margin-top: 150px;
+    margin-left: 30px;
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+.m1:hover{
+    border: sienna;
+    border-width: 1px;
+    border-style: solid;
+}
+.m2:hover{
+    border: sienna;
+    border-width: 1px;
+    border-style: solid;
+}
+.m3:hover{
+    border: sienna;
+    border-width: 1px;
+    border-style: solid;
+}
+.m4:hover{
+    border: sienna;
+    border-width: 1px;
+    border-style: solid;
+}
+.m5:hover{
+    border: sienna;
+    border-width: 1px;
+    border-style: solid;
+}
+.m6:hover{
+    border: sienna;
+    border-width: 1px;
+    border-style: solid;
+}
+.img2 {
+    width: 50%;
+    height: 400px;
+    background: url(../img/piso2.png);
+    background-color: white;
+    margin: 50px 10px 0px 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    padding: 13px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+}
+#p1,
+#p2 {
+    width: 50%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: -20px;
+}
+.piso1 {
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: white;
+    background-image: url(../img/piso1.png);
+    background-size: cover;
+    background-position: center;
+}
+.piso2 {
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: white;
+    background-image: url(../img/piso2.png);
     background-size: cover;
     background-position: center;
 }
 
-.container-text {
-    width: 40%;
-    padding: 50px;
+/*.container-text {
+    width: 50%;
+    padding: 40px;
     overflow-y: auto;
-}
-
-.container-text h1 {
-    font-size: 30px;
-}
-.container-text p {
-    margin-top: 20px;
-    font-size: 15px;
-}
+}*/
 
 .btncerrar {
     width: 50px;

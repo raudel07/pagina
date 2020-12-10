@@ -27,9 +27,13 @@ Route::group(['prefix' => 'admin','as'=> 'admin' ], function () {
 });
 Route::group(['prefix' => 'usuario','as'=> 'usuario' ], function () {
     Route::get('/', 'PerfilController@index');
-    Route::get('/reservaciones', 'PerfilController@reservaciones');
+    Route::get('/reservaciones', 'ReservacionesController@index');
     Route::get('/servicio_domicilio', 'PerfilController@serviciodomicilio');
     Route::get('/buzon', 'PerfilController@buzon');
+    Route::get('/menu', 'MenuController@index');
+    Route::get('/acercade','AcercaController@index');
+    Route::get('/contacto','ContactoController@index');
+    Route::get('/blogs', 'BlogController@index');
     
 });
 Route::get('/index','Controller@index');

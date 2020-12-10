@@ -27,6 +27,7 @@
                     </div>
                     @endif
                 </div>
+                <img id="logologin" src="../img/logo.jpg" width="150px" height="70px" alt="">
                 <!--Email-->
                 <input class="input-field"  id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
 

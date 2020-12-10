@@ -1,7 +1,7 @@
 <div class="sidebarr">
     <center>
         <img src="../img/photo.png" class="profile_image" alt="">
-        <h4>{{ Auth::user()->name }} {{ Auth::user()->ap }}</h4>
+        <h4>{{ Auth::user()->name }}</h4>
     </center>
         <a href="/usuario/"><i class="fas fa-user-circle"></i><span>Perfil</span></a>
         <a href="/usuario/reservaciones"><i class="fas fa-desktop"></i><span>Reservaciones</span></a>

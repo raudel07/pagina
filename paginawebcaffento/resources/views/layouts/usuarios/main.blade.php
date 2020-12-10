@@ -59,6 +59,13 @@
   <!-- Page level custom scripts -->
   <script src="{{ asset('/dash/js/demo/chart-area-demo.js')}}"></script>
   <script src="{{ asset('/dash/js/demo/chart-pie-demo.js')}}"></script>
+  <script>
+    function getInputValue(){
+        
+        var valor = document.getElementById("mesa").value;
+        document.getElementById("num_mesa").value = valor;
+    }
+</script>
 </body>
 
 </html>

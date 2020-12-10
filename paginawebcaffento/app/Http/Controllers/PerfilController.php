@@ -6,14 +6,15 @@ use Illuminate\Http\Request;
 
 class PerfilController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         return view('layouts.usuarios.perfil');
     }
-    public function reservaciones()
-    {
-        return view('layouts.usuarios.reservaciones');
-    }
+   
     public function serviciodomicilio()
     {
         return view('layouts.usuarios.servicio_domicilio');
