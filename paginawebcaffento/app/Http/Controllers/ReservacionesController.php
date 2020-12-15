@@ -4,39 +4,59 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Validator;
-use App\reservaciones;
+use App\Reservacion;
+use Illuminate\Support\Facades\Auth;
 
 class ReservacionesController extends Controller
 {
-    public function index()
+    public function __construct()
     {
-        return view('layouts.usuarios.reservaciones');
+        $this->middleware('auth');
+    }
+    public function index(Request $request)
+    {
+        $reservations =\DB::table('reservacions') 
+        ->select('reservacions.*')
+        ->get();
+            return view('layouts.usuarios.reservaciones')->with('reservations', $reservations);
     }
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'num_mesa' => 'required|min:3',
-            'fecha' => 'required|date',
-            'hora' => 'required|time',
-            'descripcion' => 'max:200',
-            'num_personas' => 'max:4',
-            'motivo' => 'required|max:50'
+            
+            'num_mesa' => 'min:1',
+            'fecha' => 'date',
+            'num_personas' => 'required|max:4',
+            'motivo' => 'max:50',
+            'descripcion'=>'max:200',
         ]);
+       /* $inforeservacion=[
+            'id_usuario' =>Auth::user()->id,
+            'num_mesa' => $request->num_mesa,
+            'fecha' => $request->fecha,
+            'hora' => $request->hora,
+            'descripcion' => $request->descripcion,
+            'num_personas' => $request->num_personas,
+            'motivo' => $request->motivo,
+        ];
+        $usuario = User::create($infousuario);*/
         if ($validator->fails()) {
             return back()
                 ->withInput()
-                ->with('ErrorInsert', 'Favor de llenar todo los campos')
+                ->with('ErrorInsert', 'Indique el número de personas')
                 ->withErrors($validator);
         } else {
-            $reservacion =  reservaciones::create([
-                'num_mesa' => $request->num_mesa,
-                'fecha' => $request->fecha,
-                'hora' => $request->hora,
-                'descripcion' => $request->descaripcion,
-                'num_personas' => $required->num_personas,
-                'motivo' => $request->motivo,
+           /* $usuario =reservacions()->create($inforeservacion);*/
+            $reservacion=  Reservacion::create([
+                'id_usuario' =>Auth::user()->id,
+            'num_mesa' => $request->num_mesa,
+            'fecha' => $request->fecha,
+            'hora' => $request->hora,
+            'descripcion' => $request->descripcion,
+            'num_personas' => $request->num_personas,
+            'motivo' => $request->motivo,
             ]);
-            return back()->with('Listo', 'Se a registrado correctamente');
+            return back()->with('Listo', 'La reservacion fue un exito');
         }
     }
 }

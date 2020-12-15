@@ -69,7 +69,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbars-rs-food">
                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item "><a class="nav-link" href="/index">Inicio</a></li>
+                  <li class="nav-item "><a class="nav-link" href="/">Inicio</a></li>
                   <li class="nav-item"><a class="nav-link" href="/usuario/menu">Menú</a></li>
                   <li class="nav-item"><a class="nav-link" href="/usuario/acercade">Acerca de</a></li>
                   <li class="nav-item active">
@@ -77,13 +77,18 @@
                   </li>
                   <li class="nav-item"><a class="nav-link" href="/usuario/contacto">Contacto</a></li>
                   <li class="nav-item dropdown">
+                     @if( Auth::user())
                      <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Perfil</a>
                      <div class="dropdown-menu" aria-labelledby="dropdown-a">
                         <a class="dropdown-item" href="/usuario">Mi perfil</a>
                         <a class="dropdown-item" href="/usuario/reservaciones">Reservaciones</a>
                         <a class="dropdown-item" href="/usuario/servicio_domicilio">Servicio a domicilio</a>
                         <a class="dropdown-item" href="/usuario/buzon">Buzón</a>
+                        <a class="dropdown-item" class=" logut_btn" data-toggle="modal" data-target="#logoutModal" href="">Cerrar sesion</a>
                      </div>
+                     @else
+                     <a class="nav-link" href="/registro_login">Inicia sesion / registrate</a>
+                     @endif
                   </li>
                </ul>
             </div>
@@ -154,6 +159,27 @@
          </div>
       </div>
       <!-- footer section end -->
+          <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title colorletra" id="exampleModalLabel">Salir</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body colorletra">¿Decea cerrar la sesión?</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class="btn btn-primary" type="submit">Salir</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
       <a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
 

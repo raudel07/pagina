@@ -19,8 +19,5 @@ class PerfilController extends Controller
     {
         return view('layouts.usuarios.servicio_domicilio');
     }
-    public function buzon()
-    {
-        return view('layouts.usuarios.buzon');
-    }
+    
 }

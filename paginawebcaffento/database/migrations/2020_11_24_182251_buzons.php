@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Reservciones extends Migration
+class Buzones extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,11 @@ class Reservciones extends Migration
      */
     public function up()
     {
-        Schema::create('reservacions', function (Blueprint $table) {
+        Schema::create('buzons', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('id_usuario')->unsigned();
-            $table->string('num_mesa');
-            $table->date('fecha');
-            $table->time('hora');
-            $table->string('descripcion');
-            $table->string('motivo');
-            $table->integer('num_personas');
+            $table->string('titulo');
+            $table->string('mensaje'); 
             $table->timestamps();
 
             $table->foreign('id_usuario')->references('id')->on('users');
@@ -35,6 +31,6 @@ class Reservciones extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reservacions');
+        Schema::dropIfExists('buzones');
     }
 }

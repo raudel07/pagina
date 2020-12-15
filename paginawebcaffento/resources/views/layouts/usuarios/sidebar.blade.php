@@ -7,5 +7,5 @@
         <a href="/usuario/reservaciones"><i class="fas fa-desktop"></i><span>Reservaciones</span></a>
         <a href="/usuario/servicio_domicilio"><i class="fas fa-shopping-cart"></i><span>Servicio a domicilio</span></a>
         <a href="/usuario/buzon"><i class="fas fa-envelope"></i><span>Buzon</span></a>
-        <a href="/index"><i class="fas fa-sign-out-alt"></i><span>Salir de perfil</span></a>
+        <a href="/"><i class="fas fa-sign-out-alt"></i><span>Salir de perfil</span></a>
 </div>

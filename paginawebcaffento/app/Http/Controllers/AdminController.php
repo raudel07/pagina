@@ -11,7 +11,7 @@ class AdminController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-        if(Auth::user()->nivel =='cliente'){return redirect('/index');}
+        if(Auth::user()->nivel =='cliente'){return redirect('/');}
         return view('layouts.administrador.admin');
     }
     

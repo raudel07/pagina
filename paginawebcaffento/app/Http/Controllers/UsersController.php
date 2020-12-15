@@ -23,8 +23,7 @@ class UsersController extends Controller
         if(Auth::user()->nivel !='admin'){return redirect('/admin');}
         return view('layouts.administrador.usuarios')->with('usuarios',$usuarios);
     }
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         $validator = Validator::make($request->all(),[
             'nombre'=>'required|min:3|max:20',
             'ap'=>'required|min:3|max:30',

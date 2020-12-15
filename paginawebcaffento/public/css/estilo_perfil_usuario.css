@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap");
 * {
+     
     text-decoration: none;
+   
+    
 }
 body {
     margin: 0;
     padding: 0;
     font-family: "Sansita Swashed", cursive;
+    overflow: hidden;
 }
 /* inicio de perfil */
 
@@ -358,7 +362,7 @@ a.close.disabled {
     padding: 10px 20px;
     box-sizing: border-box;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 70px;
     border-radius: 20px;
 }
 #tit_res {
@@ -378,7 +382,7 @@ a.close.disabled {
 }
 #camp-res,
 #camp-ress {
-    width: 100%;
+   
     margin-bottom: 20px;
     padding: 7px;
     box-sizing: border-box;
@@ -405,7 +409,7 @@ a.close.disabled {
     font-size: 17px;
     border: none;
 }
-#mesaa {
+.mesaa {
     width: 20%;
     margin-bottom: 20px;
     padding: 7px;
@@ -414,14 +418,25 @@ a.close.disabled {
     border: none;
 }
 #num_personas {
-    width: 45%;
+    margin-top: 0;
     margin-left: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 7px;
     box-sizing: border-box;
     font-size: 17px;
     border: none;
 }
+.color{
+    font-size: 12px;
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+.color2{
+    font-size: 12px;
+    margin: 0;
+    color: rgb(255, 0, 0);
+}
+
 #esc_mesa {
     width: 30%;
     background: #31384a;
@@ -447,6 +462,17 @@ a.close.disabled {
     .cont_res {
         width: 100%;
     }
+    #todo{
+        width: 100%;
+    }
+    #check:checked ~ .sidebarr {
+        left: -250px;
+        
+    }
+    #check:checked ~ .cont_res {
+        margin-left: 0px;
+    }
+
 }
 
 /*----------------ventana de mesas ---------------------------*/
@@ -680,4 +706,8 @@ a.close.disabled {
     border-radius: 50%;
     line-height: 10px;
     box-sizing: border-box;
+}
+.numpersonas{
+    display: flex;
+    justify-content: center;
 }

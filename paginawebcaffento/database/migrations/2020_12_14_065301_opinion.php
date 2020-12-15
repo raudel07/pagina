@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Buzones extends Migration
+class Opinion extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class Buzones extends Migration
      */
     public function up()
     {
-        Schema::create('buzones', function (Blueprint $table) {
+        Schema::create('opinion', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_usuario')->unsigned();
-            $table->string('mensaje'); 
+            $table->string('name');
+            $table->string('email');
+            $table->string('mensaje');
             $table->timestamps();
-
-            $table->foreign('id_usuario')->references('id')->on('users');
         });
     }
 
@@ -30,6 +29,6 @@ class Buzones extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('buzones');
+        Schema::dropIfExists('opinion');
     }
 }

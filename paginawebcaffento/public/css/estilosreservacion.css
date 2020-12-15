@@ -28,6 +28,10 @@ form{
      font-size: 17px;
      border: none;
  }
+ #mensaje{
+     margin-block-end: 0;
+     margin-block-start: 0;
+ }
  textarea{
      min-height: 100px;
      max-height: 200px;
@@ -41,10 +45,19 @@ form{
  #boton:hover{
      cursor: pointer;
  }
+ .nodisponible{
+     background: #ff0000;
+ }
+ #alvertencia{
+     background: red;
+ }
 
 
  @media (max-width:480px){
      form{
          width: 100%;
+     }
+     #numpersonas{
+         display: inline;   
      }
  }

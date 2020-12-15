@@ -11,9 +11,14 @@
 |
 */
 
+use Illuminate\Routing\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
+//Route::post('/', function () {
+
+//});
 Route::get('/home', function () {
     return view('home');
 });
@@ -29,14 +34,16 @@ Route::group(['prefix' => 'usuario','as'=> 'usuario' ], function () {
     Route::get('/', 'PerfilController@index');
     Route::get('/reservaciones', 'ReservacionesController@index');
     Route::get('/servicio_domicilio', 'PerfilController@serviciodomicilio');
-    Route::get('/buzon', 'PerfilController@buzon');
+    Route::get('/buzon', 'BuzonController@index');
     Route::get('/menu', 'MenuController@index');
     Route::get('/acercade','AcercaController@index');
     Route::get('/contacto','ContactoController@index');
     Route::get('/blogs', 'BlogController@index');
+    Route::resource('reservaciones', 'ReservacionesController');
+    Route::resource('/buzon', 'BuzonController');
     
 });
-Route::get('/index','Controller@index');
+
 //Route::post('/registro_login', 'Reg_LogController@store');
 //Route::resource('registro_login', 'Usuarios_ClientesController');
 Route::get('/registro_login', 'Reg_LogController@index');

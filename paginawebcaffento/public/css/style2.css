@@ -120,6 +120,9 @@ h6 a {
     text-decoration: none!important;
     opacity: 1
 }
+.colorletra{
+    color: #000;
+}
 
 button:focus {
     outline: none;
@@ -159,7 +162,7 @@ a,
 
 img {
     max-width: 100%;
-    height: auto;
+    
 }
 
  :focus {
